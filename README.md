@@ -115,9 +115,10 @@ Ejemplo de cuerpo:
   "price": 1599.99,
   "stock": 10
 }
+```
 Paso 2: Crear una orden
 POST http://localhost:8084/api/orders
-
+```
 Ejemplo de cuerpo:
 
 [
@@ -127,6 +128,7 @@ Ejemplo de cuerpo:
     "stock": 3
   }
 ]
+```
 productId: ID del producto previamente creado.
 
 stock: cantidad deseada. Este valor será comparado con el stock actual del producto.

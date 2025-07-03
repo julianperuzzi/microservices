@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "YOUR_COLLECTION_ID",
+    "name": "Product Management API - Apple Store - Julian Peruzzi 39955389",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_collection_id": "YOUR_COLLECTION_ID"
+  },
+  "variables": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Product By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product - iPhone 17 Pro",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"iPhone 17 Pro\",\n    \"price\": 1099,\n    \"status\": true,\n    \"stock\": 15,\n    \"description\": \"iPhone 17 Pro 256GB - Space Black\",\n    \"category\": {\n        \"id\": 1,\n        \"status\": true\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products"]
+            },
+            "description": "Requires authentication (admin:1234)"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product - MacBook Air M3",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"MacBook Air M3\",\n    \"price\": 1299,\n    \"status\": true,\n    \"stock\": 10,\n    \"description\": \"MacBook Air 13'' con chip M3 - Midnight\",\n    \"category\": {\n        \"id\": 1,\n        \"status\": true\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products"]
+            },
+            "description": "Requires authentication (admin:1234)"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Product - Apple Watch Series 9",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Apple Watch Series 9\",\n    \"price\": 499,\n    \"status\": true,\n    \"stock\": 20,\n    \"description\": \"Apple Watch Series 9 45mm - Starlight\",\n    \"category\": {\n        \"id\": 1,\n        \"status\": true\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products"]
+            },
+            "description": "Requires authentication (admin:1234)"
+          },
+          "response": []
+        },
+        {
+          "name": "Edit Product - iPhone 17 Pro",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"iPhone 17 Pro Max\",\n    \"price\": 1199,\n    \"stock\": 12,\n    \"status\": true,\n    \"description\": \"iPhone 17 Pro Max 512GB - Titanium Black\",\n    \"category\": {\n        \"id\": 1,\n        \"status\": true\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products", "1"]
+            },
+            "description": "Update product details by ID"
+          },
+          "response": []
+        },
+
+        {
+          "name": "Create Product - iPad Pro 12.9'' M4",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"iPad Pro 12.9'' M4\",\n    \"price\": 1599,\n    \"status\": true,\n    \"stock\": 8,\n    \"description\": \"iPad Pro 12.9'' M4 - 512GB WiFi\",\n    \"category\": {\n        \"id\": 1,\n        \"status\": true\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "products"]
+            },
+            "description": "Requires authentication (admin:1234)"
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "categories"]
+            }
+          },
+          "response": []
+        },
+
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Apple Devices\",\n    \"status\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/categories",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "categories"]
+            },
+            "description": "Requires authentication (admin:1234)"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "admin",
+        "type": "string"
+      },
+      {
+        "key": "password",
+        "value": "1234",
+        "type": "string"
+      }
+    ]
+  }
+}

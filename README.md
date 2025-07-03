@@ -2,7 +2,7 @@
 # Microservicios de Productos y Órdenes  
 **Proyecto de Julian Peruzzi – DNI 39.955.389**
 
-Este proyecto consiste en una arquitectura basada en microservicios desarrollada con **Spring Boot**, simulando el backend de una tienda virtual similar al sistema de compras de Apple. Se compone de dos microservicios principales: `Product` y `Orders`.
+Este proyecto consiste en una arquitectura basada en microservicios desarrollada con **Spring Boot**, simulando el backend de una tienda virtual productos Apple. Se compone de dos microservicios principales: `Product` y `Orders`.
 
 El sistema permite gestionar productos y órdenes de compra, asegurando que las órdenes solo se creen si hay stock disponible. Los servicios se comunican entre sí utilizando HTTP interno a través de `RestTemplate`.
 
@@ -162,9 +162,8 @@ Documentación generada con Swagger UI
 
 Autenticación HTTP básica para todos los endpoints
 
-Proyecto preparado para extensión modular futura (servicio de usuarios, pagos, etc.)
 
-Autor
+
 Julian Peruzzi
 DNI: 39.955.389
 GitHub: https://github.com/julianperuzzi
